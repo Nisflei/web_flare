@@ -16,5 +16,4 @@ jobs:
             echo "${{secrets.KEY_G}}" > webserver && chmod 600 webserver
             ssh -o StrictHostKeyChecking=no -i webserver ubuntu@ec2-44-214-35-38.compute-1.amazonaws.com "
                  cd /var/www/html &&
-                 git pull "
-                 
+                 git pull https://github.com/Nisflei/web_flare.git master "         
