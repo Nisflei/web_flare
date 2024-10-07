@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Acesso EC2
         run: |
-            echo "$KEY_G" > webserver && chmod 600 webserver
+            echo "${{secrets.KEY_G}}" > webserver && chmod 600 webserver
             ssh -o StrictHostKeyChecking=no -i "webserver" ubuntu@ec2-44-214-35-38.compute-1.amazonaws.com "
                  cd /var/www/html &&
                  git pull "
